@@ -1,0 +1,23 @@
+a{
+  color:white;
+}
+.containpost {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  max-width: 90%;
+}
+.posts h3{
+  margin-left: 4rem;
+  text-decoration: underline;
+}
+.container{
+  margin:5% 12%;
+}
+.activelink{
+  color:black;
+}
+.headerlink{
+  margin-left: 10px;
+  margin-right: 10px;
+}
