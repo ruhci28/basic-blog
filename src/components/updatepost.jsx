@@ -22,6 +22,8 @@ function UpdatePost () {
       }
     });
   }
+  // This function made a patch request to jsonplaceholder api to update the post.
+  // It also update the allpost state to see the updated post in ui.
   function handleSubmit(event) {
     event.preventDefault();
     axios.patch('https://jsonplaceholder.typicode.com/posts/'+post.userId,post)

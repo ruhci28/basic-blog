@@ -17,6 +17,7 @@ function CreatePost () {
     liked:false,
     dislike:false
   })
+  // handle changes in input fields
   function handleChange(event){
     event.persist()
     const {name,value} = event.target;
@@ -27,6 +28,7 @@ function CreatePost () {
       }
     });
   }
+  // handle submission of the form. post a post request to the api and add the new post to allpost state also
   function handlesubmit(event){
     event.preventDefault();
     axios.post('https://jsonplaceholder.typicode.com/posts',{userId:post.userId,title:post.title,body:post.body})

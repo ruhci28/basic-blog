@@ -77,7 +77,9 @@ export default function NavBar() {
   const [hint ,sethint] = React.useState('');
   const allpost = useSelector(state => state.allpost);
   const dispatch = useDispatch();
-
+// handle changes in searchbar it on the searchmode if searchbar contain some text and
+// turn off serachmode if searchbar is empty. It also call filterpost function which
+ // filters the post according to the text wriiten in searchbar
   function handleChange(event) {
     if(event.target.value){
       dispatch(turnonsearchmode());
@@ -89,12 +91,13 @@ export default function NavBar() {
     dispatch(searchterm(event.target.value));
     filterpost();
   }
+  // function to filter the posts that contain the spicific text written in the searchbar.
   function filterpost(){
     const filterposts = allpost.filter(post => JSON.stringify(post).toLowerCase().includes(hint.toLowerCase()));
     console.log(filterposts);
     dispatch(filteredpost(filterposts));
   }
-  
+
   return (
     <div className={classes.root}>
       <AppBar position="static">

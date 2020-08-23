@@ -1,12 +1,14 @@
 a{
   color:white;
 }
+/* posts cards containing container */
 .containpost {
   display: flex;
   flex-wrap: wrap;
   margin: 4rem auto;
   max-width: 90%;
 }
+/* heading which tells the category of post */
 .posts h3{
   margin-left: 4rem;
   text-decoration: underline;

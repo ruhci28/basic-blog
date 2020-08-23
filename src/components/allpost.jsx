@@ -10,6 +10,8 @@ function AllPost () {
   return (
     <div className='posts'>
     {
+      // shows filterpost only when searchmode is on.
+      // when searchmode is off show all posts.
       searchmode ? <span>
       <h3>Filter Post</h3>
       <div className="containpost">

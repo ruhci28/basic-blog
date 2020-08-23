@@ -40,7 +40,7 @@ function SinglePost (props) {
     title:props.title,
     body:props.body
   }
-
+// function to like the post. this function change like property of the post to true.
   function likepost () {
     setlike(true);
     const value = allpost;
@@ -57,7 +57,7 @@ function SinglePost (props) {
   });
   dispatch(setallpost(updatedarray));
 };
-
+// function to remove like from  the post. this function change like property of the post to false. Thus the post is no longer liked.
  function removelikepost () {
    setlike(false);
    const value = allpost;
@@ -74,7 +74,7 @@ function SinglePost (props) {
    });
    dispatch(setallpost(updatedarray));
  }
-
+// function to dislike the post. this function change dislike property of the post to true.
  function dislikepost() {
    setUnlike(true);
    const value = allpost;
@@ -91,6 +91,8 @@ function SinglePost (props) {
    });
    dispatch(setallpost(updatedarray2));
  }
+ // function to remove dislike from  the post. this function change dislike property of the post to false.
+ // Thus the post is no longer disliked.
  function removedislikepost() {
    setUnlike(false);
    const value = allpost;
@@ -107,6 +109,8 @@ function SinglePost (props) {
  });
  dispatch(setallpost(updatedarray));
  }
+ // this function makes a delete request to json placeholder api.
+ // and also remove the particular post from allpost state. 
  function deletepost() {
    axios.delete('https://jsonplaceholder.typicode.com/posts/'+user.id)
         .then(res => {})
